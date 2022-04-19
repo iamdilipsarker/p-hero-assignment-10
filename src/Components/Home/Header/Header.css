@@ -1,10 +1,31 @@
-nav{
-    background-color: #FFC0CB;
-    text-decoration:none;
+.header{
+    background-color: #40E0D0;
+    
     text-align: center;
+    padding:20px;
     
 }
-nav link{
-    color:black
+.header nav a{
+    color:#ffffff;
+    margin-right: 15px;
+    text-decoration:none;
 }
-
+.header nav a:hover{
+    color:#000000;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-part-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-part-1 img{
+   margin-right: 5px;
+}
+.navbar-part-2{
+    margin-right: 80px;
+}

@@ -5,6 +5,9 @@ import Home from "./Components/Home/Home/Home";
 import Checkout from "./Components/Checkout/Checkout";
 import Blog from "./Components/Blog/Blog";
 import NotFound from "./Components/NotFound/NotFound";
+import About from "./Components/About/About";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Register/Register";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       
