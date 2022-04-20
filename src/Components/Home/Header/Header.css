@@ -1,13 +1,12 @@
 .header{
     background-color: #40E0D0;
-    
     text-align: center;
-    padding:20px;
-    
+    padding:8px;
+   
 }
 .header nav a{
     color:#ffffff;
-    margin-right: 15px;
+    margin-right: 8px;
     text-decoration:none;
 }
 .header nav a:hover{
@@ -17,15 +16,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
+    
 }
 .navbar-part-1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left:15px;
 }
 .navbar-part-1 img{
    margin-right: 5px;
 }
 .navbar-part-2{
-    margin-right: 80px;
+    margin-right: 40px;
 }
