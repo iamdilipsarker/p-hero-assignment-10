@@ -8,7 +8,7 @@ const Services = () => {
   const [Services, setServices] = useServices();
   return (
     <div>
-      <h3 className="text-center">My Services</h3>
+      <h3 className="text-center pt-3">My Services</h3>
       <div className="services">
         {Services.map((service) => (
           <div className="service-info" key={service.id}>
