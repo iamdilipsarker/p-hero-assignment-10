@@ -1,0 +1,20 @@
+.footer{
+    background-color: #ffe4c4;
+    height:80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------------*\
+Responsive Design
+\*-------------------------------*/
+/*-------------------------------*\
+for medium device
+\*-------------------------------*/
+
+@media only  screen and (min-width:577px) and (max-width:992px){
+    .footer{
+        width:100%;
+    }
+}

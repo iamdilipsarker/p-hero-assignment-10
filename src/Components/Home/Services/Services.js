@@ -8,13 +8,16 @@ const Services = () => {
   const [Services, setServices] = useServices();
   return (
     <div>
+      <h3 className="text-center">My Services</h3>
       <div className="services">
         {Services.map((service) => (
           <div className="service-info" key={service.id}>
             <img src={service.img} alt="" />
             <div className="service-info-text">
               <p>Treatment : {service.name}</p>
-              <p>Procedure: {service.description}</p>
+              <p>
+                Procedure: <small>{service.description}</small>
+              </p>
               <p>Price: {service.price} Tk</p>
             </div>
             <button className="btn-cart">
