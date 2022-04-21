@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "./../../../../src/images/logo.png";
 import "./Header.css";
 
@@ -13,17 +13,42 @@ const Header = () => {
             <h3 className="pt-2">The Dentist Care</h3>
           </div>
           <div className="navbar-part-2">
-             <Link to="/home">Home</Link>
-            <Link to="/checkout">Checkout</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/about">About</Link>
-            <Link to="/login">Login</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/home"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/checkout"
+            >
+              Checkout
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/blog"
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/about"
+            >
+              About
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              to="/login"
+            >
+              Login
+            </NavLink>
           </div>
         </div>
       </nav>
-      
     </div>
   );
 };
 
 export default Header;
+  

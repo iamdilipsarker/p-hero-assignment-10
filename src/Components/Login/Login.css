@@ -65,6 +65,7 @@ for medium device
 @media only  screen and (min-width:577px) and (max-width:992px){
     .form-container{
         width:80%;
+         
     }
    
 }
