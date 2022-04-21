@@ -1,0 +1,35 @@
+.contact {
+    padding:1% 7%;
+    text-align:center;
+    background-color:#ffe4c4;
+    margin-top:40px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    width:70%;
+    
+
+}
+.contact textarea, input {
+    width:100%;
+    padding:20px;
+    font-size:1rem;
+    font-family: inherit;
+    text-align: center;
+    border:none;
+    border-radius:5px;
+    resize: none;
+    margin-top: 15px;
+}
+.contact button {
+    border:none;
+    border-radius:5px;
+    background-color: #F74258;
+    padding:10px 12px;
+    color:white;
+    cursor: pointer;
+    margin: 10px;
+    width:100px;
+}
+.contact button:hover{
+    background-color: #ff6347;
+}

@@ -10,13 +10,13 @@ const Header = () => {
         <div className="navbar">
           <div className="navbar-part-1">
             <img src={logo} alt="" />
-            <Link to="/home">Home</Link>
+            <h3 className="pt-2">The Dentist Care</h3>
+          </div>
+          <div className="navbar-part-2">
+             <Link to="/home">Home</Link>
             <Link to="/checkout">Checkout</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
-          </div>
-          <div className="navbar-part-2">
-            <Link to="/register">Register</Link>
             <Link to="/login">Login</Link>
           </div>
         </div>

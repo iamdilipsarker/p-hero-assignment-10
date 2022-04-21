@@ -22,7 +22,7 @@
     },
     {
       "id": "4",
-      "description": "Surgical extractions are performed on teeth that are either invisible or inaccessible, like un-erupted wisdom teeth. An incision is usually made in the gum tissue and a drill is used to precisely remove some of the adjacent bone tissue. Sometimes, the tooth has to be split into several pieces to completely remove it.",
+      "description": "Surgical extractions are performed on teeth that are either invisible or inaccessible, like un-erupted wisdom teeth. An incision is usually made in the gum tissue and a drill is used to precisely remove some of the adjacent bone tissue.",
       "name": "Tooth Extraction",
       "img": "images/tooth-extraction.jpg",
       "price": 3300

@@ -3,10 +3,11 @@
     text-align: center;
     padding:8px;
    
+   
 }
 .header nav a{
     color:#ffffff;
-    margin-right: 8px;
+    margin-right: 20px;
     text-decoration:none;
 }
 .header nav a:hover{
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
    
     
 }
@@ -24,10 +26,27 @@
     justify-content: center;
     align-items: center;
     margin-left:15px;
+    color:#ffffff;
 }
 .navbar-part-1 img{
    margin-right: 5px;
 }
 .navbar-part-2{
     margin-right: 40px;
+}
+
+/*-------------------------------*\
+Responsive Design
+\*-------------------------------*/
+/*-------------------------------*\
+for small device
+\*-------------------------------*/
+@media only screen and (max-width:576px){
+    .navbar-part-1{
+        display: none;
+    }
+    .navbar-part-2{
+        width:100%;
+        margin-left: 50px;
+    }
 }
