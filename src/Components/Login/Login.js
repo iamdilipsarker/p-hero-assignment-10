@@ -13,7 +13,7 @@ const Login = () => {
               required
               type="email"
               name="email"
-              id=""
+              id="#"
               placeholder="Enter your Email"
             />
           </div>
@@ -23,7 +23,7 @@ const Login = () => {
               required
               type="password"
               name="password"
-              id=""
+              id="#"
               placeholder="Enter your Password"
             />
           </div>

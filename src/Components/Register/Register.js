@@ -1,42 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 const Register = () => {
+  let [email, setEmail] = useState("");
+  let[password, setPassword] = useState("");
+  let [confirmPassword, setConfirmPassword] = useState("");
+  let [error, setError] = useState("");
+
+  const [CreateUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
+  
+  const handleEmailBlur = event => {
+    setEmail = event.target.value;
+    
+  }
+
+  const handlePasswordBlur = (event) => {
+    setPassword = event.target.value;
+  };
+
+  const handleConfirmPasswordBlur = (event) => {
+    setConfirmPassword = event.target.value;
+  };
+
+  const handleCreateUser = event => {
+    event.preventDefault();
+    
+    if (password !== confirmPassword) {
+      setError("Your password did not match")
+      return;
+    }
+    if (password.length > 6) {
+      setError("Your password must be 6 characters or longer");
+      return;
+    }
+    CreateUserWithEmailAndPassword(email,password);
+  }
+
+
     return (
       <div className="form-container">
         <div>
           <h3 className="form-title">Please Register</h3>
-          <form>
+          <form onSubmit={handleCreateUser}>
             <div className="form-input-group">
               <label htmlFor="email">Email</label>
               <input
+                onBlur={handleEmailBlur}
                 required
                 type="email"
                 name="email"
-                id=""
+                id="email"
                 placeholder="Enter your Email"
               />
             </div>
             <div className="form-input-group">
               <label htmlFor="password">Password</label>
               <input
+                onBlur={handlePasswordBlur}
                 required
                 type="password"
                 name="password"
-                id=""
+                id="password"
                 placeholder="Enter your Password"
               />
             </div>
             <div className="form-input-group">
               <label htmlFor="confirm-password">Confirm Password</label>
               <input
+                onBlur={handleConfirmPasswordBlur}
                 required
                 type="password"
                 name="confirm-password"
-                id=""
+                id="confirm-password"
                 placeholder="Enter your Password"
               />
             </div>
+            <p style={{color:"red"}}>{error}</p>
             <input className="form-submit" type="submit" value="Register" />
           </form>
           <p>
