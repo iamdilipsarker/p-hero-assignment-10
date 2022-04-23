@@ -13,13 +13,13 @@ const Footer = () => {
     const year = today.getFullYear();
   return (
     <>
-      <footer class="footer-section">
-        <div class="footer-area">
+      <footer className="footer-section">
+        <div className="footer-area">
           <h6>The Dentist Care</h6>
-          <p class="footers-para">Copyright &copy; {year} The Dentist Care</p>
-          <p class="footers-para">All rights reserved</p>
+          <p className="footers-para">Copyright &copy; {year} The Dentist Care</p>
+          <p className="footers-para">All rights reserved</p>
         </div>
-        <div class="contact-link">
+        <div className="contact-link">
           <span>
             <a href="#" target="_blank">
               <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>

@@ -1,17 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import {getAuth} from "firebase/auth"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId
+  apiKey: "AIzaSyDF3AZ1GJj9DpYGairKUQVD8jF2uI1lyjU",
+  authDomain: "dilips-p-hero-assignment-10.firebaseapp.com",
+  projectId: "dilips-p-hero-assignment-10",
+  storageBucket: "dilips-p-hero-assignment-10.appspot.com",
+  messagingSenderId: "872429595703",
+  appId: "1:872429595703:web:9fa65ae9c8265089dce3b2",
 };
 
 // Initialize Firebase
