@@ -1,4 +1,5 @@
 import React from "react";
+import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
 import auth from "../../../Firebase.init";
@@ -7,6 +8,9 @@ import "./Header.css";
 
 const Header = () => {
   const [user] = useAuthState(auth);
+  const handleLogOut = () => {
+    signOut(auth);
+  };
   return (
     <div className="header">
       <nav>
@@ -40,18 +44,21 @@ const Header = () => {
             >
               About
             </NavLink>
-            {user ?
-              <button className="log-out-btn">Log Out</button>
-              :
+            {user ? 
+              <button onClick={handleLogOut} className="log-out-btn">
+                Log Out
+              </button>
+             : 
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active-link" : "link"
+                  (isActive ? "active-link" : "link")
                 }
                 to="/login"
               >
                 Login
               </NavLink>
             }
+            
           </div>
         </div>
       </nav>
@@ -60,4 +67,3 @@ const Header = () => {
 };
 
 export default Header;
-  

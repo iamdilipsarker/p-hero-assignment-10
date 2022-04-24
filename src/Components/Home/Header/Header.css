@@ -52,6 +52,9 @@
     color:#ffffff;
     padding:5px;
 }
+.log-out-btn:hover{
+    background-color: #FF1493;
+}
 
 /*-------------------------------*\
 Responsive Design
