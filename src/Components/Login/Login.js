@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import SocialLogin from "./SocialLogin/SocialLogin";
 const Login = () => {
   return (
     <div className="form-container">
@@ -32,6 +33,7 @@ const Login = () => {
         <p>
           New to The Dentist Care? <Link className="form-link" to="/register">Create an account</Link>
         </p>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

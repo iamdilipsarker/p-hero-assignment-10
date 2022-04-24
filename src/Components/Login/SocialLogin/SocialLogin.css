@@ -1,0 +1,26 @@
+.social-horizontal-line{
+    background-color: #808080;
+    width:50%;
+    height: 1px;
+}
+.social-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-login-btn{
+    width:50%;
+    margin:0 auto;
+    background-color: #FFDEAD;
+    border:none;
+    display: block;
+    margin-bottom: 20px;
+    padding:10px;
+    border-radius: 5px;
+}
+.google-logo{
+    margin-right: 5px;
+}
+.social-login-btn:hover{
+     background-color:rgba(255,153,0,0.6) ;
+}

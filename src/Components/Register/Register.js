@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 const Register = () => {
   const [email, setEmail] = useState("");
   const[password, setPassword] = useState("");
@@ -90,6 +91,7 @@ const Register = () => {
               Login
             </Link>
           </p>
+          <SocialLogin></SocialLogin>
         </div>
       </div>
     );
