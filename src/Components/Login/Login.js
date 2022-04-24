@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
 import "./Login.css";
 import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
   const navigate = useNavigate();
+  location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -20,7 +23,7 @@ const Login = () => {
      setPassword(event.target.value);
   };
   if (user) {
-    navigate("/home")
+    navigate(from,{replace:true});
   }
   const handleUserSignIn = event => {
     event.preventDefault();
