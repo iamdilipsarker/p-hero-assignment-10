@@ -1,5 +1,6 @@
+import { async } from "@firebase/util";
 import React, { useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
 import "./Login.css";
@@ -14,6 +15,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] =
+    useSendPasswordResetEmail(auth);
 
    const handleEmailBlur = (event) => {
      setEmail(event.target.value);
@@ -24,6 +27,12 @@ const Login = () => {
   };
   if (user) {
     navigate(from,{replace:true});
+  }
+  const resetPassword = async () => {
+     
+    await sendPasswordResetEmail(email);
+    alert("set email");
+
   }
   
   const handleUserSignIn = event => {
@@ -70,6 +79,7 @@ const Login = () => {
             Create an account
           </Link>
         </p>
+        <p>Forget Password?{" "}<Link to="" onClick={resetPassword }className="form-link">Forget Password</Link></p>
         <SocialLogin></SocialLogin>
       </div>
     </div>

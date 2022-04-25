@@ -9,7 +9,7 @@ import About from "./Components/About/About";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
-import Test from "./Components/Login/Test";
+
 
 function App() {
   return (

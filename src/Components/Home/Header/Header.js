@@ -44,21 +44,20 @@ const Header = () => {
             >
               About
             </NavLink>
-            {user ? 
+            {user ? (
               <button onClick={handleLogOut} className="log-out-btn">
                 Log Out
               </button>
-             : 
+            ) : (
               <NavLink
                 className={({ isActive }) =>
-                  (isActive ? "active-link" : "link")
+                  isActive ? "active-link" : "link"
                 }
                 to="/login"
               >
                 Login
               </NavLink>
-            }
-            
+            )}
           </div>
         </div>
       </nav>
