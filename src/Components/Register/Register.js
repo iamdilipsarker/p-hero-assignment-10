@@ -34,8 +34,6 @@ const Register = () => {
 
   const handleCreateUser = event => {
     event.preventDefault();
-   
-   
     if (password !== confirmPassword) {
       setError("Your password did not match")
       return;
