@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Register = () => {
   const [email, setEmail] = useState("");
   const[password, setPassword] = useState("");
@@ -43,7 +46,8 @@ const Register = () => {
       setError("Your password must be 6 characters or longer");
       return;
     }
-     CreateUserWithEmailAndPassword(email, password);
+    CreateUserWithEmailAndPassword(email, password);
+    toast("Account created successfully.")
     
   }
 
@@ -86,7 +90,7 @@ const Register = () => {
                 placeholder="Enter your Password"
               />
             </div>
-            <p style={{color:"red"}}>{error}</p>
+            <p style={{ color: "red" }}>{error}</p>
             <input className="form-submit" type="submit" value="Register" />
           </form>
           <p>
@@ -96,6 +100,7 @@ const Register = () => {
             </Link>
           </p>
           <SocialLogin></SocialLogin>
+          <ToastContainer />
         </div>
       </div>
     );

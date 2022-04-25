@@ -5,6 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
 import "./Login.css";
 import SocialLogin from "./SocialLogin/SocialLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,13 +33,14 @@ const Login = () => {
   const resetPassword = async () => {
      
     await sendPasswordResetEmail(email);
-    alert("set email");
+    toast("Reset password mail has been sent.");
 
   }
   
   const handleUserSignIn = event => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
+    toast("Login Successful!")
    
   }
 
@@ -67,9 +70,9 @@ const Login = () => {
               id="password"
               placeholder="Enter your Password"
             />
-            
+
             {loading && <p>loading...</p>}
-            {error && <p style={{color:"red"}}>Your Password is wrong!</p>}
+            {error && <p style={{ color: "red" }}>Your Password is wrong!</p>}
           </div>
           <input className="form-submit" type="submit" value="Login" />
         </form>
@@ -79,8 +82,14 @@ const Login = () => {
             Create an account
           </Link>
         </p>
-        <p>Forget Password?{" "}<Link to="" onClick={resetPassword }className="form-link">Forget Password</Link></p>
+        <p>
+          Forget Password?{" "}
+          <Link to="" onClick={resetPassword} className="form-link">
+            Forget Password
+          </Link>
+        </p>
         <SocialLogin></SocialLogin>
+        <ToastContainer />
       </div>
     </div>
   );
