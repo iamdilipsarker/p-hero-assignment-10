@@ -4,41 +4,41 @@
       "description": "During this procedure a rubber dam is put over your teeth to protect the gums, and a bleaching product is painted onto your teeth. Then a light or laser is shone on the teeth to activate the chemical. The light speeds up the reaction of the whitening product and the color change can be achieved more quickly.",
       "name": "Teeth Whitening Procedures",
       "img": "images/teeth-whitening-procedures.jpg",
-      "price": 1500
+      "cost": 1500
     },
     {
       "id": "2",
       "description": "Dental sealant is a thin, plastic coating painted on the chewing surfaces of teeth -- usually the back teeth (the premolars and molars) -- to prevent tooth decay. The sealant quickly bonds into the depressions and grooves of the teeth, forming a protective shield over the enamel of each tooth",
       "name": "Dental Sealants Application",
       "img": "images/dental-sealants-application.jpg",
-      "price": 2500
+      "cost": 2500
     },
     {
       "id": "3",
       "description": "It a form of hypnosis that will help the patient control the dental pain. There will be a combination of Nitrous Oxide and deep relaxation techniques to help the patients relax and eliminate anxiety",
       "name": "Painless Dental Procedures",
       "img": "images/painless-dental-procedures.jpg",
-      "price": 3500
+      "cost": 3500
     },
     {
       "id": "4",
       "description": "Surgical extractions are performed on teeth that are either invisible or inaccessible, like un-erupted wisdom teeth. An incision is usually made in the gum tissue and a drill is used to precisely remove some of the adjacent bone tissue.",
       "name": "Tooth Extraction",
       "img": "images/tooth-extraction.jpg",
-      "price": 3300
+      "cost": 3300
     },
     {
       "id": "5",
       "description": "Routine dental care can be done any time during pregnancy. Any urgent procedure can be done, as well. All elective dental procedures, however, should be postponed until after the delivery.",
       "name": "Dental Hygiene In Pregnancy",
       "img": "images/dental-hygiene-in-pregnancy.jpg",
-      "price": 3000
+      "cost": 3000
     },
     {
       "id": "6",
       "description": "Treatment for gingivitis aims to control the infection and restore healthy teeth and gums. Your dentist or periodontist will thoroughly clean your teeth to remove harmful bacteria, plaque and tartar",
       "name": "Gum Infection Gingivitis",
       "img": "images/gum-infection-gingivitis.jpg",
-      "price": 3400
+      "cost": 3400
     }
 ]

@@ -21,7 +21,7 @@ const Services = () => {
               <p>
                 Procedure: <small>{service.description}</small>
               </p>
-              <p>Price: {service.price} Tk</p>
+              <p>Price: {service.cost} Tk</p>
             </div>
             <button className="btn-cart" onClick={() => navigate("/checkout")}>
               <p className="btn-text">Book an Appointment</p>
